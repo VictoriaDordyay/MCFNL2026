@@ -24,8 +24,8 @@ from fdtd1d import FDTD1D
 x = np.linspace(-1.0, 1.0, 401)
 
 # Gaussian initial condition
-x0    = 0.0   # centre
-sigma = 0.08  # width
+x0    = -0.2   # centre
+sigma = 0.15  # width
 e0    = np.exp(-0.5 * ((x - x0) / sigma) ** 2)
 
 # Number of animation frames and simulation time step between frames
@@ -106,8 +106,8 @@ HTML(anim.to_jshtml()) # display the animation inline
 x_mur  = np.linspace(-1.0, 1.0, 401)
 xH_mur = (x_mur[1:] + x_mur[:-1]) / 2.0
 
-x0_mur    = 0.0
-sigma_mur = 0.08
+x0_mur    = -0.2
+sigma_mur = 0.15
 
 # Left-traveling wave: E = gaussian, H = -gaussian
 e0_mur = np.exp(-0.5 * ((x_mur  - x0_mur) / sigma_mur) ** 2)
