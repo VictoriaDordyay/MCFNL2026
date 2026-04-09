@@ -166,7 +166,7 @@ def test_fdtd_mur_boundary_conditions():
     assert np.allclose(e_solved, 0.0, atol=1e-2)
     assert np.allclose(h_solved, 0.0, atol=1e-2)
 
-def test_fdtd_dissipative_exact():
+    def test_fdtd_dissipative_exact():
     xMax = 1.0
     xMin = -1.0
     L = xMax - xMin
@@ -211,7 +211,7 @@ def test_fdtd_dissipative_exact():
     assert np.allclose(h_solved, h_expected, atol=1e-2)
 
 
-""" def test_fdtd_dielectric_reflection():
+    def test_fdtd_dielectric_reflection():
     L = 2.0
     N = 401
     x = np.linspace(0, L, N)
